@@ -98,6 +98,8 @@ let InvoiceController = {
 
     let newTransactions;
     if (data.transactions.length) {
+      newInvoice.total_amount=0;
+      newInvoice.total_quantity =0;
       newTransactions = data.transactions.map((i) => {
         i.line_total = i.quantity * i.price;
         newInvoice.total_amount =
