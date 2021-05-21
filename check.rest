@@ -1,0 +1,58 @@
+GET http://localhost:5000/invoices 
+
+###
+
+GET http://localhost:5000/invoices/60a76a78f58eb33a687378a4
+
+###
+
+POST http://localhost:5000/invoices
+content-type: application/json
+
+{
+    "customer": "test123",
+    "transactions": [
+        {
+        "product": "test prod",
+        "quantity": "1",
+        "price": "10.00"
+        },
+        {
+        "product": "test prod1",
+        "quantity": 2,
+        "price": "10.00"
+        }
+      ]
+}
+###
+
+PUT http://localhost:5000/invoices/60a76974f58eb33a68737886
+content-type: application/json
+
+{
+    "customer": "test111",
+    "date":"2024-05-21",
+    "transactions": [
+        {
+        "_id": "60a76974f58eb33a68737888",
+        "product": "test prod111",
+        "quantity": "3",
+        "price": "15.00"
+        },
+        {
+        "product": "test prod432",
+        "quantity": 2,
+        "price": "10.05"
+        }
+      ]
+}
+
+###
+
+DELETE  http://localhost:5000/invoices/60a760139910e129448f75db
+
+
+###
+###
+
+GET http://localhost:5000/transactions/
